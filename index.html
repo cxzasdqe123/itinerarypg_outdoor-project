@@ -62,11 +62,44 @@
 <body class="bg-gray-50">
 
     <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-2">
-                <span class="text-xl font-bold tracking-tighter"><span class="text-brand-yellow">出走</span><span class="text-brand-teal">計劃</span></span>
+        <div class="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between">
+            
+            <!-- 左側：LOGO -->
+            <a href="index.html" class="flex items-center space-x-2 shrink-0">
+                <!-- 🖼️ 替換處：放置您的 SVG LOGO -->
+                <img src="https://drive.google.com/thumbnail?id=1muxHnTnUmu6DFqnHyMy_-burvdzVJRZo&sz=w1366" alt="出走計劃 Outdoor Project Logo" class="h-14 md:h-20 lg:h-24 w-auto object-contain mix-blend-multiply">
             </a>
-            <button class="bg-brand-teal text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full text-xs md:text-sm font-bold shadow-md hover:brightness-105 transition">聯繫顧問</button>
+
+            <!-- 中間：電腦版導覽分頁 -->
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-10 text-sm lg:text-base font-bold text-gray-600">
+                <a href="index.html" class="hover:text-brand-teal transition">首頁</a>
+                <a href="#" class="text-brand-teal border-b-2 border-brand-teal pb-1">精選行程</a>
+                <a href="#" class="hover:text-brand-teal transition">關於我們</a>
+                <a href="#" class="hover:text-brand-teal transition">聯絡我們</a>
+            </div>
+
+            <!-- 右側：行動呼籲與手機版選單按鈕 -->
+            <div class="flex items-center space-x-3 shrink-0">
+                <!-- 🔗 替換處：聯繫顧問按鈕 -->
+                <a href="https://lin.ee/nsfyYPj" target="_blank" class="hidden sm:inline-block bg-brand-teal text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full text-sm md:text-base font-bold shadow-md hover:brightness-105 transition text-center">聯繫顧問</a>
+                
+                <!-- 手機版漢堡選單按鈕 -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none p-2 ml-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 手機版下拉選單 (預設隱藏) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl transition-all duration-300">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="index.html" class="block px-4 py-3 text-base font-bold text-gray-700 hover:text-brand-teal hover:bg-gray-50 rounded-xl transition">首頁</a>
+                <a href="#" class="block px-4 py-3 text-base font-bold text-brand-teal bg-brand-teal/10 rounded-xl transition">精選行程</a>
+                <a href="#" class="block px-4 py-3 text-base font-bold text-gray-700 hover:text-brand-teal hover:bg-gray-50 rounded-xl transition">關於我們</a>
+                <a href="#" class="block px-4 py-3 text-base font-bold text-gray-700 hover:text-brand-teal hover:bg-gray-50 rounded-xl transition">聯絡我們</a>
+                <!-- 手機版底部的聯繫按鈕 -->
+                <a href="https://lin.ee/nsfyYPj" target="_blank" class="block mt-4 bg-brand-teal text-white px-5 py-3 rounded-xl text-base font-bold shadow-md text-center transition">聯繫顧問</a>
+            </div>
         </div>
     </nav>
 
@@ -75,7 +108,6 @@
         <div id="carousel">
             <!-- Slide 1: 日光 文藝 -->
             <div class="carousel-item active">
-                <!-- 📸 替換處：日光行程主視覺 -->
                 <img src="https://drive.google.com/thumbnail?id=1I_AKj_BG2jeRPjRB8HOM5qK92z-e5fiY&sz=w1920" class="w-full h-full object-cover opacity-70" alt="日光神橋">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 max-w-6xl mx-auto">
                     <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-10 text-center drop-shadow-lg leading-tight">日光 ∙ 時光停駐的神聖山林</h2>
@@ -84,7 +116,6 @@
             </div>
             <!-- Slide 2: 九州 櫻島 -->
             <div class="carousel-item">
-                <!-- 📸 替換處：九州行程主視覺 -->
                 <img src="https://drive.google.com/thumbnail?id=1pRDkqODlHs2BFRKMEciUeT4UbpH--edY&sz=w1920" class="w-full h-full object-cover opacity-70" alt="鹿兒島櫻島火山">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 max-w-6xl mx-auto">
                     <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-10 text-center drop-shadow-lg leading-tight">九州 ∙ 火山與溫泉的大地詩篇</h2>
@@ -93,7 +124,6 @@
             </div>
             <!-- Slide 3: 全家旅遊 -->
             <div class="carousel-item">
-                <!-- 📸 替換處：全家旅遊形象圖 -->
                 <img src="https://drive.google.com/thumbnail?id=1cQjj3hvJaaxPHT7cmEsQgSDCps1ciDC6&sz=w1920" class="w-full h-full object-cover opacity-70" alt="富士山家族旅行">
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 max-w-6xl mx-auto">
                     <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-10 text-center drop-shadow-lg leading-tight">把瑣碎留給我們，把最珍貴的團聚留給家人</h2>
@@ -119,7 +149,7 @@
                     日光＋東京・文藝五日
                 </button>
                 <button onclick="switchTab('kyushu')" id="btn-kyushu" class="tab-btn pb-4 text-sm md:text-lg text-gray-400 hover:text-brand-teal transition whitespace-nowrap">
-                    熊本＋鹿兒島・鄉村五日
+                    熊本＋鹿兒島・私人五日
                 </button>
             </div>
         </div>
@@ -152,14 +182,21 @@
                         <div>
                             <span class="text-brand-teal font-bold text-lg md:text-xl italic">DAY 01</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">啟程・角川武藏野奇幻建築</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">專車前往隈研吾大師設計的【角川武藏野博物館】。開啟充滿文藝氣息的一天。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-teal">
-                                <p><strong class="text-brand-teal">【美食】</strong> 晚餐：飯店自助餐 或 燒肉冠軍</p>
-                                <p><strong class="text-brand-teal">【住宿】</strong> 東京皇家公園飯店 或 王子大飯店</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">抵達羽田機場後，專車前往隈研吾大師設計的【角川武藏野博物館】。開啟充滿文藝氣息的一天。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-teal mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-teal mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>機上精緻美饌</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【二選一】東京王子大飯店 波多豪華百匯自助餐<br><span class="text-xs text-gray-500">或</span> 燒肉冠軍 (頂級和牛燒肉套餐)</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-teal"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 東京皇家公園飯店 或 東京王子大飯店 (或同級)</p>
                             </div>
                         </div>
                         <!-- 📸 替換處：Day 01 景點照 (建議：角川博物館書牆) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1hxkGmK9F7UWr1ehAY-fDPyB1HcsCr8Wd&sz=w600" alt="角川博物館書牆" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -169,16 +206,24 @@
                 <div class="relative">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                         <!-- 📸 替換處：Day 02 景點照 (建議：SPACIA X 窗景) -->
-                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1fLQI1ZWW4gp05VKUmDtcYLX_em5e0_Jd&sz=w600" alt="SPACIA X 窗景座艙" class="w-full h-full object-cover">
                         </div>
                         <div class="order-1 md:order-2">
                             <span class="text-brand-teal font-bold text-lg md:text-xl italic">DAY 02</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">移動美學・SPACIA X 往日光</h3>
                             <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">體驗旗艦級特急前往日光。巡禮東照宮、中禪寺湖與華嚴瀑布。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-teal">
-                                <p><strong class="text-brand-teal">【美食】</strong> 午餐：日光霜降牛套餐 (妙月坊)</p>
-                                <p><strong class="text-brand-teal">【住宿】</strong> 日光金谷飯店 (百年傳奇旅宿)</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-teal mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-teal mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【妙月坊】日光特產・極致霜降牛排套餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【日光金谷飯店】百年經典・和洋折衷會席料理</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-teal"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 日光金谷飯店 (經典傳奇渡假飯店)</p>
                             </div>
                         </div>
                     </div>
@@ -190,13 +235,22 @@
                         <div>
                             <span class="text-brand-teal font-bold text-lg md:text-xl italic">DAY 03</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">甜蜜與神祕・草莓園與地底宮殿</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">日光草莓園採果樂，午後探索大谷資料館的神祕地底空間。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-teal">
-                                <p><strong class="text-brand-teal">【美食】</strong> 午餐：和牛鐵板燒香味亭 / 晚餐：權八居酒屋饗宴</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">日光草莓園採果樂，午後探索大谷資料館的神祕地底空間，傍晚漫步明治神宮與代代木公園。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-teal mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-teal mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【香味亭】主廚桌邊秀・頂級和牛鐵板燒</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【權八居酒屋】特選道地和食與酒水暢飲</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-teal"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 東京皇家公園飯店 或 東京王子大飯店</p>
                             </div>
                         </div>
                         <!-- 📸 替換處：Day 03 景點照 (建議：日本鮮紅草莓) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1LfSYeURuvtDbnWdxYUYFzziHD5yxR90E&sz=w600" alt="日光鮮紅草莓" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -206,15 +260,24 @@
                 <div class="relative">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                         <!-- 📸 替換處：Day 04 景點照 (建議：teamLab 數位藝術) -->
-                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1Edc2_ywCijkslUfh3G2kmHoDzM_X-Uq8&sz=w600" alt="teamLab" class="w-full h-full object-cover">
                         </div>
                         <div class="order-1 md:order-2">
                             <span class="text-brand-teal font-bold text-lg md:text-xl italic">DAY 04</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">數位美學・teamLab 與淺草散策</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">沉浸在 teamLab 無界光影中，隨後前往淺草乘坐傳統人力車。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-teal">
-                                <p><strong class="text-brand-teal">【美食】</strong> 午餐：敘敘苑燒肉 / 晚餐：LUKE 景觀餐廳</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">沉浸在 teamLab 無界光影中，隨後前往晴空塔，並於淺草乘坐雙人傳統人力車漫步老街。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-teal mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-teal mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【敘敘苑 晴空塔店】高空景觀・特選和牛燒肉套餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【LUKE 景觀餐廳】直面東京鐵塔・高空雲端法式晚宴</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-teal"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 東京皇家公園飯店 或 東京王子大飯店</p>
                             </div>
                         </div>
                     </div>
@@ -227,9 +290,18 @@
                             <span class="text-brand-teal font-bold text-lg md:text-xl italic">DAY 05</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">歸途・帶著滿載回憶返台</h3>
                             <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">帶著滿載的回憶前往羽田機場。這場文藝出走計畫完美落幕。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-teal mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-teal mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>機上精緻美饌</span></li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- 📸 替換處：Day 05 景點照 (建議：全家人合照) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1vDbJ3xWe6jdRZvxzI45UsREwdZv9teVj&sz=w600" alt="旅行歸途合照" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -261,14 +333,22 @@
                         <div>
                             <span class="text-brand-yellow font-bold text-lg md:text-xl italic text-brand-yellow">DAY 01</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">啟程・九州初擁與百年鰻魚</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">參拜霧島神宮。午餐享用百年老舖「德永鰻魚飯」。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-yellow">
-                                <p><strong class="text-brand-yellow">【美食】</strong> 午餐：德永鰻魚飯 / 晚餐：飯店內雪蟹自助餐</p>
-                                <p><strong class="text-brand-yellow">【住宿】</strong> 霧島國際酒店 或 同級</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">抵達熊本空港後，專車前往參拜霧島神宮。隨後品嚐當地最知名的極致炭烤美味。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-yellow mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-yellow mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>機上精緻美饌</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【うなぎの徳永】創業百年老舖・炭火直烤特上鰻魚飯</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【霧島國際酒店】百匯自助餐廳・雪蟹無限量吃到飽</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-yellow"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 霧島國際酒店 或 同級</p>
                             </div>
                         </div>
                         <!-- 📸 替換處：Day 01 景點照 (建議：烤鰻魚特寫) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1OIrelM3wNwreEnhGpu7_IemS6y1aABgl&sz=w600" alt="德永鰻魚飯" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -278,15 +358,24 @@
                 <div class="relative">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                         <!-- 📸 替換處：Day 02 景點照 (建議：包機俯瞰櫻島) -->
-                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=144Avhi9FYEphBYRyKne3uvaaOKY_LaIn&sz=w600" alt="私人包機俯瞰櫻島" class="w-full h-full object-cover">
                         </div>
                         <div class="order-1 md:order-2">
                             <span class="text-brand-yellow font-bold text-lg md:text-xl italic text-brand-yellow">DAY 02</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">震撼視野・私人包機俯瞰櫻島</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">搭乘私人包機近距離感受火山脈動。下午探訪仙巖園，並在指宿體驗【天然砂浴】。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-yellow">
-                                <p><strong class="text-brand-yellow">【住宿】</strong> 指宿白水館 (頂級溫泉名宿)</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">搭乘私人包機 (30分鐘) 近距離感受火山脈動。下午探訪仙巖園，並在指宿體驗著名的【天然砂浴】。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-yellow mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-yellow mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【Kirizen】霧島古民家・在地地雞與海鮮爐端燒</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【指宿白水館】精緻和風・季節旬味會席料理</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-yellow"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 指宿白水館 (日本傳統名宿・附設天然砂蒸)</p>
                             </div>
                         </div>
                     </div>
@@ -298,14 +387,22 @@
                         <div>
                             <span class="text-brand-yellow font-bold text-lg md:text-xl italic text-brand-yellow">DAY 03</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">列車奇遇・玉手箱與火山灰畫</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">搭乘黑白特急【玉手箱】。午後前往櫻島參與火山灰畫 DIY。</p>
-                            <div class="bg-gray-50 p-4 rounded-xl text-[11px] md:text-xs space-y-2 border-l-4 border-brand-yellow">
-                                <p><strong class="text-brand-yellow">【美食】</strong> 午餐：熊襲亭黑豚涮涮鍋</p>
-                                <p><strong class="text-brand-yellow">【住宿】</strong> 城山觀光酒店 (櫻島絕景房)</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">搭乘日本著名黑白特急【指宿之玉手箱】。午後前往櫻島參與獨特的火山灰畫 DIY 體驗。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-yellow mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-yellow mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【熊襲亭】在地50年傳統・黑豚涮涮鍋 或 頂級黑毛和牛陶板燒</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【城山觀光酒店】主廚精緻特選會席料理</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-yellow"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 城山觀光酒店 (可直面眺望櫻島火山絕景)</p>
                             </div>
                         </div>
                         <!-- 📸 替換處：Day 03 景點照 (建議：玉手箱列車) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1IX9mAdPw4dMkEA6k_atzuUlkTav1DvBw&sz=w600" alt="指宿之玉手箱列車" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -315,13 +412,25 @@
                 <div class="relative">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                         <!-- 📸 替換處：Day 04 景點照 (建議：全家和服合照) -->
-                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="order-2 md:order-1 w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1c-ClJ7HRTWA0yuXI4rONpNZQv8YdxLO5&sz=w600" alt="水前寺成趣園和服體驗" class="w-full h-full object-cover">
                         </div>
                         <div class="order-1 md:order-2">
                             <span class="text-brand-yellow font-bold text-lg md:text-xl italic text-brand-yellow">DAY 04</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">城下和服・熊本城與成趣園</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">造訪熊本城。在成趣園體驗傳統和服，晚間入住杖立溫泉。</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">搭乘新幹線前往熊本。造訪雄偉的熊本城，並在成趣園體驗傳統和服，留下難忘的全家福。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-yellow mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-yellow mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>【城見櫓】直面熊本城景・熊本名物特選馬肉料理</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">晚餐</span> <span>【杖立觀光肥前屋】豐富多樣・和洋中式百匯自助餐</span></li>
+                                </ul>
+                                <hr class="my-3 border-gray-200">
+                                <p><strong class="text-brand-yellow"><i class="fa-solid fa-bed mr-1"></i> 住宿：</strong> 杖立觀光肥前屋 (九州規模最大人氣溫泉區)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -332,10 +441,19 @@
                         <div>
                             <span class="text-brand-yellow font-bold text-lg md:text-xl italic text-brand-yellow">DAY 05</span>
                             <h3 class="text-md md:text-lg font-bold mb-2">歸途・帶著暖意回家</h3>
-                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">最後一次浸泡九州溫泉後，前往熊本機場。</p>
+                            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">享受最後一次晨間的九州溫泉洗禮後，專車前往熊本機場。</p>
+                            
+                            <!-- 🍽️ 本日菜單區塊 -->
+                            <div class="bg-gray-50 p-4 md:p-5 rounded-2xl text-[12px] md:text-sm border-l-4 border-brand-yellow mt-4 shadow-sm">
+                                <h4 class="font-bold text-brand-yellow mb-3 flex items-center"><i class="fa-solid fa-utensils mr-2"></i> 本日嚴選菜單</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">早餐</span> <span>飯店內晨光早餐</span></li>
+                                    <li class="flex"><span class="w-10 flex-shrink-0 text-gray-400 font-bold">午餐</span> <span>機上精緻美饌</span></li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- 📸 替換處：Day 05 景點照 (建議：溫泉區晨景) -->
-                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64">
+                        <div class="w-full overflow-hidden rounded-2xl bg-gray-100 h-48 md:h-64 mt-2">
                             <img src="https://drive.google.com/thumbnail?id=1ntIqLpKYHmkQKNvVkT5zqwP8aqhQu49D&sz=w600" alt="九州溫泉歸途" class="w-full h-full object-cover">
                         </div>
                     </div>
@@ -350,8 +468,9 @@
             <h4 class="text-xl md:text-2xl font-bold mb-4">打造屬於您全家的出走計畫</h4>
             <p class="text-gray-500 text-sm md:text-base mb-10 leading-relaxed px-4">行程內容皆可根據您的偏好彈性微調。</p>
             <div class="flex flex-col md:flex-row justify-center gap-4 px-6">
-                <button class="bg-brand-teal text-white px-10 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg">連繫專屬顧問</button>
-                <button class="border-2 border-gray-200 px-10 py-4 rounded-2xl font-bold hover:bg-gray-50 transition">返回首頁</button>
+                <!-- 🔗 替換處：將 href 內的 YOUR_CONTACT_LINK_HERE 換成您的 Line 連結或表單連結 -->
+                <a href="https://lin.ee/nsfyYPj" target="_blank" class="bg-brand-teal text-white px-10 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg inline-block text-center">連繫專屬顧問</a>
+                <a href="index.html" class="border-2 border-gray-200 px-10 py-4 rounded-2xl font-bold hover:bg-gray-50 transition inline-block text-center">返回首頁</a>
             </div>
         </div>
     </section>
@@ -379,24 +498,52 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-item');
         const dots = document.querySelectorAll('.carousel-dot');
+        let slideInterval; 
 
         function setCarousel(index) {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.replace('bg-white', 'bg-white/40');
             dots[currentSlide].classList.remove('w-8');
             dots[currentSlide].classList.add('w-3');
+            
             currentSlide = index;
+            
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.replace('bg-white/40', 'bg-white');
             dots[currentSlide].classList.remove('w-3');
             dots[currentSlide].classList.add('w-8');
+            
+            resetInterval();
+        }
+
+        function autoPlay() {
+            let next = (currentSlide + 1) % slides.length;
+            setCarousel(next);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(autoPlay, 5000); 
         }
 
         setCarousel(0);
-        setInterval(() => {
-            let next = (currentSlide + 1) % slides.length;
-            setCarousel(next);
-        }, 5000);
+
+        // 手機版導覽列切換邏輯
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            // 切換圖示 (漢堡線 <-> 叉叉)
+            const icon = btn.querySelector('i');
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
     </script>
 </body>
 </html>
